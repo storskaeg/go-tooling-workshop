@@ -21,9 +21,12 @@ import (
 func div(a, b int) int {
 	return int(float64(a) / float64(b))
 }
+
+var resu int
+
 func BenchmarkDiv_Basic(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		div(126, 3)
+		resu = div(126, 3)
 	}
 }
 

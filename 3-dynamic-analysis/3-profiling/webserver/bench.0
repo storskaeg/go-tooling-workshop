@@ -1,0 +1,6 @@
+goos: darwin
+goarch: amd64
+pkg: github.com/storskaeg/go-tooling-workshop/3-dynamic-analysis/3-profiling/webserver
+BenchmarkIsGopher-4   	  200000	      6949 ns/op
+PASS
+ok  	github.com/storskaeg/go-tooling-workshop/3-dynamic-analysis/3-profiling/webserver	1.483s
