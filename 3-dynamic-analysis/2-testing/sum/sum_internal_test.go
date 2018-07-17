@@ -18,4 +18,20 @@ import "testing"
 
 func TestRecursive(t *testing.T) {
 	// Implement the body of this test, calling recursive.
+	happyVals := []int{0, 1, 2, 3}
+	sadVals := []int{}
+
+	gotHappy := recursive(happyVals)
+	gotSad := recursive(sadVals)
+
+	wantHappy := 6
+	wantSad := 0
+
+	if gotHappy != wantHappy {
+		t.Errorf("want: %v; got: %v", wantHappy, gotHappy)
+	}
+
+	if gotSad != wantSad {
+		t.Errorf("want: %v; got: %v", wantSad, gotSad)
+	}
 }

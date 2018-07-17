@@ -14,8 +14,28 @@
 
 package sum_test
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/storskaeg/go-tooling-workshop/3-dynamic-analysis/2-testing/sum"
+)
 
 func TestAll(t *testing.T) {
 	// Implement the body of this test, calling sum.All.
+	happyVals := []int{0, 1, 2, 3}
+	var sadVals []int
+
+	gotHappy := sum.All(happyVals...)
+	gotSad := sum.All(sadVals...)
+
+	wantHappy := 6
+	wantSad := 0
+
+	if gotHappy != wantHappy {
+		t.Errorf("want: %v; got: %v", wantHappy, gotHappy)
+	}
+
+	if gotSad != wantSad {
+		t.Errorf("want: %v; got: %v", wantSad, gotSad)
+	}
 }
